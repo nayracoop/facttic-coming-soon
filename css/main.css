@@ -1,0 +1,156 @@
+@font-face {
+    font-family: 'robotolight';
+    src: url('../fonts/Roboto-Light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+  font:300 100%/1.375 'robotolight', Arial, Helvetica, sans-serif;
+  background: #fff;
+  color: #333;
+}
+
+#wrapper a {
+  color: #3f9ed1;
+}
+
+#wrapper {
+  height: 100%;
+  /* width: 100%;
+  position: absolute;
+  border: 8px solid #fff;
+  box-shadow: -15px 0 16px -10px rgba(0,0,0,.75) inset;
+  overflow: auto; */
+}
+
+.p5Canvas {
+  position: fixed;
+  top:0;
+  left: 0;
+  display: block;
+  opacity: 0.5;
+  animation: appears 1s ease-in-out;
+}
+
+header, .header {
+  position: absolute;
+  bottom:50%;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  margin-bottom: -10em;
+  text-align: center;
+}
+
+header p, .header p {
+  font-size:1em;
+  /* text-transform: uppercase; */
+  text-align: center;
+  /* margin-top: 6em; */
+  /* display: inline-block; */
+  padding:0.5em;
+  width:640px;
+  max-width:85%;
+  margin:0 auto;
+  /* margin-bottom:1.25em; */
+}
+
+header p:nth-of-type(2), .header p:nth-of-type(2) {
+  /* font-size: 1em; */
+}
+
+header p span, .header p span {
+  background: #fff;
+}
+
+header p strong, .header p strong {
+  /* display:block; */
+}
+
+.logo {
+  width: 450px;
+  max-width: 85%;
+  background: url(../img/facttic.svg) no-repeat center center;
+  overflow: hidden;
+  margin:3em auto;
+  /* margin-bottom:3em; */
+  /* margin-top: -100px; */
+}
+
+.logo * {
+  position: absolute;
+  left:-999px;
+  top:-999px;
+}
+
+.logo::after {
+  content: "";
+  display: block;
+  padding-top:27.15%;
+}
+
+.dev span,
+.love span {
+  display: inline-block;
+  text-align: left;
+  text-indent:-9999px;
+}
+
+.dev::after {
+  content: "</>";
+}
+
+.love::after {
+  content: "♥";
+}
+
+footer {
+  font-family: monospace;
+  font-size: 0.875em;
+  position: absolute;
+  bottom:1.25em;
+  left: 30px;
+  letter-spacing: -0.125em;
+  z-index: 2;
+}
+
+@keyframes appears {
+  0% { opacity: 0; }
+  100% { opacity: 0.5; }
+}
+
+@media all and (max-width: 640px) {
+
+  footer {
+    text-align: center;
+    right:30px;
+    color:#999;
+  }
+}
+
+@media all and (max-height: 20em) {
+  header, .header {
+    position: relative;
+    bottom:auto;
+    left: auto;
+    right: auto;
+    margin-bottom: 4em;
+  }
+
+  footer {
+    position: relative;
+    bottom:auto;
+    left: auto;
+    right: auto;
+    margin:1.25em auto;
+    text-align: center;
+    color:#999;
+  }
+
+}
